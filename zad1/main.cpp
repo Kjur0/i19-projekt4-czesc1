@@ -13,17 +13,18 @@ int main() {
 	cout << "Creating new service..." << endl;
 	cout << "Please enter the following information:" << endl;
 	cout << "Enter car make: ";
-	cin >> carMake;
+	getline(cin, carMake);
 	cout << "Enter car model: ";
-	cin >> carModel;
+	getline(cin, carModel);
 	cout << "Enter car year: ";
 	cin >> carYear;
+	cin.ignore(); // Ignore the newline character left by previous input
 	cout << "Enter customer name: ";
-	cin >> customerName;
+	getline(cin, customerName);
 	cout << "Enter customer address: ";
-	cin >> customerAddress;
+	getline(cin, customerAddress);
 	cout << "Enter customer phone: ";
-	cin >> customerPhone;
+	getline(cin, customerPhone);
 	cout << "Enter parts cost: ";
 	cin >> partsCost;
 	cout << "Enter labor cost: ";
@@ -49,10 +50,5 @@ int main() {
 	cout << "Service cost: " << service.getCost() << endl;
 
 	cout << endl << endl << endl << "Press enter to exit...";
-	cin.get();
-
-	delete& service;
-	delete& serviceQuote;
-	delete& customer;
-	delete& car;
+	return !!!getchar();
 }
