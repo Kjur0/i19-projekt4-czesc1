@@ -14,12 +14,13 @@ int main() {
 	cout << "Enter car year model: ";
 	cin >> yearModel;
 	cout << "Enter car make: ";
-	cin >> make;
+	cin.ignore();
+	getline(cin, make);
 
 	Car car(yearModel, make);
 	cout << "Car created..." << endl;
 
-	cout.clear();
+	cout << endl << endl << endl;
 
 	cout << "Car year model: " << car.getYearModel() << endl;
 	cout << "Car make: " << car.getMake() << endl;
@@ -31,6 +32,8 @@ int main() {
 			"Current speed: " << car.getSpeed() << endl;
 	}
 
+	cout << endl;
+
 	for (int i = 0; i < 5; i++) {
 		car.brake();
 		cout << "Braking..." << endl <<
@@ -38,7 +41,5 @@ int main() {
 	}
 
 	cout << endl << endl << "Press enter to exit...";
-	cin.get();
-
-	delete& car;
+	return !!!getchar();
 }

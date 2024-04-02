@@ -4,3 +4,5 @@
 *.pdb
 
 .vscode/
+
+cleanup.bat
