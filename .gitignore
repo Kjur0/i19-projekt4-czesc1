@@ -1,1 +1,6 @@
-*/compil/
+*.obj
+*.exe
+*.ilk
+*.pdb
+
+.vscode/
